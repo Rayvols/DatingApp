@@ -1,0 +1,18 @@
+<h4>
+    Internal server error - refreshint the page
+</h4>
+<ng-container *ngIf="error">
+    <h5 class="text-wight-bold">Error: {{error.message}}</h5>
+    <p class="class font-weight-bold">Описание: Если вы видите это то Ангуляр не виноват</p>
+    <p>Что сделать дальше?</p>
+    <ol>
+        <li>Открыть в хром браузер инструмент для разработки</li>
+        <li>Проверить вкладку сеть</li>
+        <li>Проверить неудачный запрос</li>
+        <li>Проверить правильность написания URL запроса</li>
+        <li>Повторить запрос в Postman - если выидим такую же проблему, 
+            очевидно проблема не с Ангуляром</li>
+    </ol>
+    <p>Исследовать стек ошибки</p>
+    <code class="mt-5" style="background-color: whitesmoke;">{{error.details}}</code>
+</ng-container>
