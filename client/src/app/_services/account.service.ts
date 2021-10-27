@@ -45,8 +45,10 @@ currentUser$ = this.currentUserSource.asObservable();
     )
   }
 
-  setCurrentUser(user?: User){
-    localStorage.setItem('user',JSON.stringify(user));
+  setCurrentUser(user: User){
+    if(user){ 
+      localStorage.setItem('user',JSON.stringify(user));
+    }
 
     this.currentUserSource.next(user);
   }
